@@ -6,16 +6,17 @@ A monitor data pusher for shadowsocks/v2ray.
 
 ## Create config file
 
-shell> mv config.json.example config.json
-shell> vi config.json
+    shell> mv config.json.example config.json
+    shell> vi config.json
 
 ## Start in console
 
-shell> python3 monitor.py
+    shell> python3 monitor.py
 
 ## Or start by docker
-shell> docker build -t apusher .
-shell> docker run -i -t apusher
+
+    shell> docker build -t apusher .
+    shell> docker run -i -t apusher
 
 ## Requirement ##
 
