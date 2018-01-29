@@ -1,4 +1,4 @@
-FROM centos:7
+FROM alpine:latest
 
 MAINTAINER i@authuir.com
 
@@ -7,14 +7,10 @@ ENV APUSHER_HOME="/opt/apusher"\
 
 WORKDIR ${APUSHER_HOME}
 
-RUN yum -y update
-RUN yum install -y yum-utils
-RUN yum install -y epel-release
-RUN yum install -y python34 
-RUN yum install -y libsodium-devel
-RUN yum install -y git
-RUN yum install -y python34-setuptools
-RUN easy_install-3.4 pip
+RUN apk update && apk add py-pip
+RUN apk add python3
+RUN apk add git
+RUN apk add libsodium
 RUN pip3 install pysocks
 RUN pip3 install requests
 
