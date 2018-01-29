@@ -1,0 +1,8 @@
+# Config File
+*.conf
+*.json
+start.sh
+
+# Cache
+shadowsocks/__pycache__/*
+shadowsocks/crypto/__pycache__/*
